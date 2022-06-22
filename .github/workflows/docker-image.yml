@@ -3,8 +3,8 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
 jobs:
 
@@ -23,6 +23,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: tjsobeck/devex-awx-ee:temp
-    #- name: Build the Docker image
-    #  run: docker build . --file Dockerfile --tag tjsobeck/devex-awx-ee:$(date +%s)
+        tags: tjsobeck/devex-awx-ee
